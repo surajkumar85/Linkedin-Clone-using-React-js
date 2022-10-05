@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 const Home = (props) => {
   return (
     <Container>
-      			{!props.user && <Redirect to="/" />}
+      	{!props.user && <Redirect to="/" />}
       <Section>
         <h5>
           <a>Hiring in a hurry? - </a>
@@ -51,6 +51,7 @@ const Section = styled.section`
     font-size: 14px;
     a {
       font-weight: 700;
+      font-style: Cursive; 
     }
   }
   p {
@@ -61,6 +62,10 @@ const Section = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 0 5px;
+  }
+  @media (max-width: 640px){
+  	flex-direction: column;
+	padding: 0 2.5px;
   }
 `;
 
@@ -80,7 +85,7 @@ const Layout = styled.div`
 `;
 const mapStateToProps = (state) => {
 	return {
-		user: state.userState.user,
+	user: state.userState.user,
 	};
 };
 
