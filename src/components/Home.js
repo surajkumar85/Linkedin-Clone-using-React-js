@@ -51,6 +51,7 @@ const Section = styled.section`
     font-size: 14px;
     a {
       font-weight: 700;
+      font-style: Cursive; 
     }
   }
   p {
@@ -61,6 +62,10 @@ const Section = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 0 5px;
+  }
+  @media (max-width: 640px){
+  	flex-direction: column;
+	padding: 0 2.5px;
   }
 `;
 
